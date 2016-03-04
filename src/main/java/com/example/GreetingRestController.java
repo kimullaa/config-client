@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class GreetingRestController {
     @RequestMapping("/greeting")
-    public Greeting greeting(@Value("${greeting:not-found}") String greeting) {
-        return new Greeting(greeting);
+    public String greeting(@Value("${greeting:not-found}") String greeting) {
+        return greeting;
     }
 }
